@@ -1,4 +1,4 @@
-package com.laposte.surfngfacteo.core_common.constant
+package com.example.blackburger.constant
 
 const val ANNONCES_DB_BASE_NAME_WITHOUT_EXT = "annonces"
 const val TERRITOIRE_DB_BASE_NAME_WITHOUT_EXT = "territoire"

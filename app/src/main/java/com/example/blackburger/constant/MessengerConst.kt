@@ -1,4 +1,4 @@
-package com.laposte.surfngfacteo.core_common.constant
+package com.example.blackburger.constant
 
 const val DATA_APP_PACKAGE_SERVICE = "com.laposte.surfngfacteo.dataapp.service.MessengerService"
 

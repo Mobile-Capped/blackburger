@@ -1,4 +1,4 @@
-package com.laposte.surfngfacteo.core_network.model.request
+package com.example.blackburger.network.model.request
 
 
 data class TokenApimRequest(

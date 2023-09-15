@@ -1,4 +1,4 @@
-package com.laposte.surfngfacteo.core_network.di
+package com.example.blackburger.network.di
 
 import com.example.blackburger.network.api.NetworkDataSource
 import com.example.blackburger.network.api.NetworkHttp

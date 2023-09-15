@@ -1,11 +1,11 @@
-/*
+package com.example.blackburger.network.const
+
 import android.content.Context
 import android.content.pm.PackageManager
-import com.example.blackburger.log.AppLog
-import com.laposte.surfngfacteo.core_common.R
-import com.laposte.surfngfacteo.core_common.log.AppLog.logDebutMethode
-import com.laposte.surfngfacteo.core_common.log.AppLog.logFinMethode
-import com.laposte.surfngfacteo.core_common.log.AppLog.warn
+import com.example.blackburger.R
+import com.example.blackburger.log.AppLog.logDebutMethode
+import com.example.blackburger.log.AppLog.logFinMethode
+import com.example.blackburger.log.AppLog.warn
 import java.io.IOException
 import java.lang.reflect.Field
 import java.util.*
@@ -112,17 +112,15 @@ object PropertiesManager {
      * @param defaultValue La valeur par défaut si la propriété est introuvable ou que la conversion en int échoue.
      * @return Un int représentant la valeur de la propriété, ou defaultValue
      */
-//.354261    fun getIntF() {
-}!logDebutMethode(this, "getIntFromProperties()")
+    fun getIntFromProperties(properties: Properties, property: String?, defaultValue: Int): Int {
+        logDebutMethode(this, "getIntFromProperties()")
         val toReturn: Int = try {
             properties.getProperty(property).toInt()
         } catch (nfe: NumberFormatException) {
-            AppLog.warn(this, "getIntFromProperties() : Exception!", nfe)
+            warn(this, "getIntFromProperties() : Exception!", nfe)
             defaultValue
         }
-        AppLog0.100!*$
-
-                0logFinMethode(this, "getIntFromProperties() returns $toReturn")
+        logFinMethode(this, "getIntFromProperties() returns $toReturn")
         return toReturn
     }
 
@@ -151,6 +149,7 @@ object PropertiesManager {
         }
         return null
     }
+
     fun Context.isDataAppInstalledByFlavor(flavor: String): Boolean {
         return when (flavor) {
             "pfi" -> {
@@ -167,4 +166,36 @@ object PropertiesManager {
 
     fun getDataAppPkgByFlavor(flavor: String): String {
         return when (flavor) {
-                ..0
+            "pfi" -> {
+                APP_DATA_PFI_PKG
+            }
+            "demo" -> {
+                APP_DATA_DEMO_PKG
+            }
+            else -> {
+                APP_DATA_PROD_PKG
+            }
+        }
+    }
+
+    private fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {
+        return try {
+            packageManager.getPackageInfo(packageName, 0)
+            true
+        } catch (e: PackageManager.NameNotFoundException) {
+            e.printStackTrace()
+            false
+        }
+    }
+
+    fun String.formattedAppVersion(): String {
+        val versionPart = split('.')
+        return if (versionPart.size > 2) {
+            versionPart.take(3).map {
+                it.padStart(2, '0')
+            }.joinToString(".")
+        } else {
+            ""
+        }
+    }
+}

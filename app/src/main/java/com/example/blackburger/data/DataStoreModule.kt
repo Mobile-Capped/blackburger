@@ -5,7 +5,7 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.PreferenceDataStoreFactory
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStoreFile
-import com.laposte.surfngfacteo.core_common.constant.DATA_STORE_NAME
+import com.example.blackburger.constant.DATA_STORE_NAME
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

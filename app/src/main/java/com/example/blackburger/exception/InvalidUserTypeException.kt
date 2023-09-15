@@ -1,3 +1,3 @@
-package com.laposte.surfngfacteo.core_common.exception
+package com.example.blackburger.exception
 
 class InvalidUserTypeException : Exception("Invalid user type!")

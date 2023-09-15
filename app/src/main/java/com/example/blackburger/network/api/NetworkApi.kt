@@ -1,12 +1,11 @@
 package com.example.blackburger.network.api
 
 import com.example.blackburger.network.const.TOKEN_ENDPOINT
-import com.laposte.surfngfacteo.core_network.const.*
 import com.example.blackburger.network.model.response.SiteResponse
 import com.example.blackburger.network.model.response.TokenApimResponse
-import com.laposte.surfngfacteo.core_network.usecase.EndPoint
-import com.laposte.surfngfacteo.core_network.usecase.Sites
-import com.laposte.surfngfacteo.core_network.usecase.Token
+import com.example.blackburger.usecase.EndPoint
+import com.example.blackburger.usecase.Sites
+import com.example.blackburger.usecase.Token
 import retrofit2.Response
 import retrofit2.http.*
 

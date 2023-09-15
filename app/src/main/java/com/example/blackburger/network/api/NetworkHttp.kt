@@ -6,7 +6,6 @@ import com.example.blackburger.log.AppLog
 import com.example.blackburger.network.const.NetworkPropertiesManager
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.laposte.surfngfacteo.core_common.exception.UnknownException
-import com.laposte.surfngfacteo.core_network.const.*
 import com.example.blackburger.network.const.NetworkPropertiesManager.REST_SERVICE_BASESERVICE_BASEURL_APIM
 import com.example.blackburger.network.interceptor.NetworkInterceptor
 import com.example.blackburger.repository.PreferencesRepository

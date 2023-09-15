@@ -107,10 +107,11 @@ fun Greeting() {
                             Box(
                                 modifier = Modifier.weight(2f).padding(10.dp,40.dp)
                                     .clickable {
+                                        /*
                                         val context = LocalContext.current
                                         val intent = Intent(context, DetailsActivity::class.java)
                                         context.startActivity(intent)
-
+                                        */
                                     }
                             ) {
 

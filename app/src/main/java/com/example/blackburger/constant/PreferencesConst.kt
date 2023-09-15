@@ -1,10 +1,10 @@
-package com.laposte.surfngfacteo.core_common.constant
+package com.example.blackburger.constant
 
 const val DATA_STORE_NAME = "settings"
 
-const val TOKEN_KEY = "com.laposte.surfngfacteo.core_common.constant.TOKEN_KEY"
-const val EXPIRATION_KEY = "com.laposte.surfngfacteo.core_common.constant.EXPIRATION_KEY"
-const val UID_KEY = "com.laposte.surfngfacteo.core_common.constant.UID_KEY"
+const val TOKEN_KEY = "com.example.blackburger.constant.TOKEN_KEY"
+const val EXPIRATION_KEY = "com.example.blackburger.constant.EXPIRATION_KEY"
+const val UID_KEY = "com.example.blackburger.constant.UID_KEY"
 
 const val LAST_USER_ID = "LAST_USER_ID"
 const val LAST_USE_DATE = "LAST_USE_DATE"
